@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Institute for Probabilistic Urban Artificial Intelligence</title>
+<meta name="description" content="An independent research initiative exploring probabilistic AI, spatial analytics, and uncertainty in urban decisions.">
+<meta name="theme-color" content="#0b1015">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="shell top">
+<a class="brand" href="./" aria-label="PUAI home"><span class="mark" aria-hidden="true">∿</span> IPI</a>
+<nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#notes">Blog</a><a href="#contact">Contact</a></nav>
+</header>
+<main id="main">
+<section class="shell hero" aria-labelledby="title">
+<div>
+<p class="eyebrow">Independent research initiative</p>
+<h1 id="title">Institute for<br>Probabilistic<br><em>Intelligence</em></h1>
+<p class="lead">We study how intelligent systems can represent uncertainty and how that uncertainty can inform decisions about cities.</p>
+<a class="button" href="#research">Explore the research</a>
+</div>
+<figure class="instrument">
+<figcaption><strong>Predictive distribution</strong><span>Illustrative model</span></figcaption>
+<canvas width="600" height="380" id="distribution" role="img" aria-label="A fixed predictive mean surrounded by adjustable symmetric uncertainty bands.">A wider band represents greater predictive uncertainty around the same mean.</canvas>
+<div class="key"><span><i></i> Predictive mean</span><span><i></i> Central 90% interval</span></div>
+<div class="control" hidden><label for="spread">Predictive spread</label><input id="spread" type="range" min="1" max="5" value="3"><output for="spread" id="level">3 / 5</output></div>
+</figure>
+</section>
+
+<section id="about" class="shell split">
+<div><p class="eyebrow">About</p><h2>Why PUAI exists</h2></div>
+<div class="bodycopy"><p>A forecast can tell us how busy a street might become. A predictive distribution gives us a way to ask how much the outcome might vary and whether the available evidence is strong enough to act on.</p>
+<p>PUAI is a one-person independent research initiative at the intersection of probabilistic machine learning, spatial analytics, and urban planning. Its work connects model development with the decisions those models are intended to support.</p>
+<article class="profile" id="researcher"><div class="monogram" aria-hidden="true">CP</div><div><h3>Chulwoong Park</h3><p class="accent">Founder and researcher</p><p>Chulwoong studies urban systems using spatial data and machine learning, with a focus on how uncertainty can be estimated, evaluated, and communicated.</p></div></article></div>
+</section>
+
+<section id="research" class="shell section">
+<p class="eyebrow">Research</p><h2>Selected projects</h2>
+<div class="projects">
+<article class="card"><p class="eyebrow">Seoul · Mobility</p><h3>Pedestrian flows in Bukchon</h3><p>Estimate hourly pedestrian volumes on streets without counters and explore how road closures could redistribute foot traffic.</p><a href="#paper-bukchon">View the publication</a></article>
+<article class="card"><p class="eyebrow">Birmingham · Urban risk</p><h3>Street-level crime risk</h3><p>Use Bayesian neural networks to estimate crime frequency by street segment and examine when predictive uncertainty signals larger errors.</p></article>
+<article class="card"><p class="eyebrow">Seoul · Mobility</p><h3>Subway ridership estimation</h3><p>Estimate the alighting and boarding ridership using spatial environment around the subway station.</p></article>
+</div>
+</section>
+
+<section id="papers" class="shell split">
+<div><p class="eyebrow">Papers</p><h2>Publications</h2></div>
+<article class="paper" id="paper-bukchon">
+<p class="eyebrow">Journal of Transport Geography · 2025</p>
+<h3>A probabilistic AI-based pedestrian volume estimation model for street-level urban management</h3>
+<p>Chulwoong Park, Wonjun No, and Youngchul Kim · Vol. 129, 104437</p>
+<a href="https://doi.org/10.1016/j.jtrangeo.2025.104437">Read the paper</a>
+</article>
+</section>
+
+<section id="notes" class="shell split">
+<div><p class="eyebrow">Blog</p><h2>Research notes</h2></div>
+<div class="notes">
+<details id="note-distribution"><summary>What does a predictive distribution tell us?</summary><div><p>Imagine two street segments with the same predicted hourly footfall. The range of plausible counts may be wider on one street, for example because it has fewer observations or more variable demand.</p><p>A predictive distribution lets us ask a question tied to an action: how likely is footfall to exceed the threshold at which we need temporary traffic controls? Before using that probability, we can check whether similarly confident forecasts have been reliable on held-out streets and times.</p></div></details>
+<details id="note-intervals"><summary>How do we check a prediction interval?</summary><div><p>For a nominal 90% prediction interval, start by measuring how often held-out observations fall inside it. Then look at interval widths. Coverage near 90% tells you little about usefulness if the intervals are too wide for the decision at hand.</p><p>Citywide averages can conceal systematic problems. Check coverage and width by neighbourhood, time of day, or street type where the sample supports it.</p></div></details>
+</div>
+</section>
+
+<section id="contact" class="shell split">
+<div><p class="eyebrow">Contact</p><h2>Get in touch</h2></div>
+<div class="bodycopy"><p>IPI welcomes conversations about probabilistic AI, urban data, and research collaboration.</p>
+<!-- Set your preferred public address in the data-email attribute before deployment. -->
+<p id="contact-channel" data-email="cwoongpark@hanyang.ac.kr">A public contact address will be added here.</p></div>
+</section>
+</main>
+<footer class="shell foot"><span>Research Institute for Probabilistic Urban Artificial Intelligence</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

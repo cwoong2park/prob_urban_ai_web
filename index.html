@@ -1,77 +1,115 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research Institute for Probabilistic Urban Artificial Intelligence</title>
-<meta name="description" content="An independent research initiative exploring probabilistic AI, spatial analytics, and uncertainty in urban decisions.">
+<title>확률 도시 인공지능 연구소 | Research Institute for Probabilistic Urban Artificial Intelligence</title>
+<meta name="description" content="확률 AI, 공간 분석, 도시 의사결정의 불확실성을 연구하는 독립 연구 프로젝트. An independent research initiative exploring probabilistic AI, spatial analytics, and uncertainty in urban decisions.">
 <meta name="theme-color" content="#0b1015">
 <link rel="stylesheet" href="./style.css">
 <script defer src="./site.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">본문으로 건너뛰기<span lang="en" class="en-inline">Skip to content</span></a>
 <header class="shell top">
-<a class="brand" href="./" aria-label="PUAI home"><span class="mark" aria-hidden="true">∿</span> IPI</a>
-<nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#papers">Papers</a><a href="#notes">Blog</a><a href="#contact">Contact</a></nav>
+<a class="brand" href="./" aria-label="PUAI 홈 / PUAI home"><img class="mark" src="./normal-distribution-logo.png" width="40" height="40" alt=""> PUAI</a>
+<nav aria-label="주 메뉴 / Main navigation"><a href="#about">소개<span lang="en" class="en">About</span></a><a href="#research">연구<span lang="en" class="en">Research</span></a><a href="#papers">논문<span lang="en" class="en">Papers</span></a><a href="#notes">블로그<span lang="en" class="en">Blog</span></a><a href="#contact">연락처<span lang="en" class="en">Contact</span></a></nav>
 </header>
 <main id="main">
 <section class="shell hero" aria-labelledby="title">
 <div>
-<p class="eyebrow">Independent research initiative</p>
-<h1 id="title">Institute for<br>Probabilistic<br><em>Intelligence</em></h1>
-<p class="lead">We study how intelligent systems can represent uncertainty and how that uncertainty can inform decisions about cities.</p>
-<a class="button" href="#research">Explore the research</a>
+<p class="eyebrow">독립 연구 프로젝트<span lang="en" class="en">Independent research initiative</span></p>
+<h1 id="title">확률적 도시 인공지능 연구소<span lang="en" class="en">Institute for <em>Probabilistic</em> Urban AI </span></h1>
+<p class="subtitle">양자역학부터 도시연구까지<span lang="en" class="en">From Quantum Mechanics to Urban Studies</span></p>
+<p class="lead">인공지능이 불확실성을 어떻게 표현하는지, 그리고 그 불확실성을 도시의 의사결정에 어떻게 활용할 수 있는지 연구합니다.<span lang="en" class="en">We study how intelligent systems can represent uncertainty and how that uncertainty can inform decisions about cities.</span></p>
+<a class="button" href="#research">연구 살펴보기<span lang="en" class="en-inline">Explore the research</span></a>
 </div>
-<figure class="instrument">
-<figcaption><strong>Predictive distribution</strong><span>Illustrative model</span></figcaption>
-<canvas width="600" height="380" id="distribution" role="img" aria-label="A fixed predictive mean surrounded by adjustable symmetric uncertainty bands.">A wider band represents greater predictive uncertainty around the same mean.</canvas>
-<div class="key"><span><i></i> Predictive mean</span><span><i></i> Central 90% interval</span></div>
-<div class="control" hidden><label for="spread">Predictive spread</label><input id="spread" type="range" min="1" max="5" value="3"><output for="spread" id="level">3 / 5</output></div>
+<figure class="instrument" aria-labelledby="comparison-title">
+<figcaption id="comparison-title">결정론적 예측과 확률적 예측<span lang="en" class="en">Deterministic vs. Stochastic</span></figcaption>
+<div class="comparison">
+<div class="comparison-panel">
+<h2>결정론적<span lang="en" class="en">Deterministic</span></h2>
+<div class="comparison-plot point-plot" aria-hidden="true"><span></span></div>
+<p>하나의 예측값<span lang="en" class="en">One predicted value</span></p>
+</div>
+<div class="comparison-panel">
+<h2>확률적<span lang="en" class="en">Stochastic</span></h2>
+<div class="comparison-plot probability-plot" aria-hidden="true">
+<span style="--height:10%"></span><span style="--height:27%"></span><span style="--height:59%"></span><span style="--height:86%"></span><span style="--height:59%"></span><span style="--height:27%"></span><span style="--height:10%"></span>
+</div>
+<p>가능한 값의 확률분포<span lang="en" class="en">Probabilities across possible values</span></p>
+</div>
+</div>
 </figure>
 </section>
 
 <section id="about" class="shell split">
-<div><p class="eyebrow">About</p><h2>Why PUAI exists</h2></div>
-<div class="bodycopy"><p>A forecast can tell us how busy a street might become. A predictive distribution gives us a way to ask how much the outcome might vary and whether the available evidence is strong enough to act on.</p>
-<p>PUAI is a one-person independent research initiative at the intersection of probabilistic machine learning, spatial analytics, and urban planning. Its work connects model development with the decisions those models are intended to support.</p>
-<article class="profile" id="researcher"><div class="monogram" aria-hidden="true">CP</div><div><h3>Chulwoong Park</h3><p class="accent">Founder and researcher</p><p>Chulwoong studies urban systems using spatial data and machine learning, with a focus on how uncertainty can be estimated, evaluated, and communicated.</p></div></article></div>
+<div><p class="eyebrow">소개<span lang="en" class="en">About</span></p><h2>PUAI의 연구 목적<span lang="en" class="en">Why PUAI exists</span></h2></div>
+<div class="bodycopy"><p>도시는 하나의 답을 내지 않습니다. 도시에는 인류의 수만큼, 어쩌면 그보다 많은 가능성들이 함께 살고 있습니다. 이제 도시 인공지능은 그 가능성과 불확실성을 향해 나아가야 합니다<span lang="en" class="en">Cities offer no single answer. As many possibilities as there are people in the world, perhaps even more, coexist in cities. It is time for urban AI to embrace those possibilities and the uncertainty they bring.</span></p>
+<p>PUAI는 확률적 기계학습, 공간 분석, 도시계획이 만나는 영역을 탐구하는 1인 독립 연구 프로젝트입니다. 모형 개발과 그 모형이 지원하는 의사결정을 연결합니다.<span lang="en" class="en">PUAI is a one-person independent research initiative at the intersection of probabilistic machine learning, spatial analytics, and urban planning. Its work connects model development with the decisions those models are intended to support.</span></p>
+<article class="profile" id="researcher"><div class="monogram" aria-hidden="true">CP</div><div><h3>박철웅<span lang="en" class="en">Chulwoong Park</span></h3><p class="accent">설립자 겸 연구자<span lang="en" class="en">Founder and researcher</span></p><p>박철웅 박사는 확률 인공지능의 가능성을 도시 공간 분석에 접목하고 그 의미를 탐구하는 연구를 합니다. 도시 인공지능이 나아가야 할 방향으로 확률 인공지능의 가능성을 제안합니다<span lang="en" class="en">Dr. Chulwoong Park explores how probabilistic AI can be applied to urban spatial analysis and what that means for the field. He proposes probabilistic AI as a direction for the future of urban AI.</span></p></div></article></div>
 </section>
 
 <section id="research" class="shell section">
-<p class="eyebrow">Research</p><h2>Selected projects</h2>
+<p class="eyebrow">연구<span lang="en" class="en">Research</span></p><h2>주요 연구 프로젝트<span lang="en" class="en">Selected projects</span></h2>
 <div class="projects">
-<article class="card"><p class="eyebrow">Seoul · Mobility</p><h3>Pedestrian flows in Bukchon</h3><p>Estimate hourly pedestrian volumes on streets without counters and explore how road closures could redistribute foot traffic.</p><a href="#paper-bukchon">View the publication</a></article>
-<article class="card"><p class="eyebrow">Birmingham · Urban risk</p><h3>Street-level crime risk</h3><p>Use Bayesian neural networks to estimate crime frequency by street segment and examine when predictive uncertainty signals larger errors.</p></article>
-<article class="card"><p class="eyebrow">Seoul · Mobility</p><h3>Subway ridership estimation</h3><p>Estimate the alighting and boarding ridership using spatial environment around the subway station.</p></article>
+<article class="card"><p class="eyebrow">서울 · 이동성<span lang="en" class="en">Seoul · Mobility</span></p><h3>북촌 보행 통행량<span lang="en" class="en">Pedestrian flows in Bukchon</span></h3><p>계수기가 없는 거리의 시간대별 보행량을 추정하고, 도로 통제로 보행 흐름이 어떻게 바뀔 수 있는지 살펴봅니다.<span lang="en" class="en">Estimate hourly pedestrian volumes on streets without counters and explore how road closures could redistribute foot traffic.</span></p><a href="#paper-bukchon">관련 논문 보기<span lang="en" class="en">View the publication</span></a></article>
+<article class="card"><p class="eyebrow">버밍엄 · 도시 위험<span lang="en" class="en">Birmingham · Urban risk</span></p><h3>도로 구간별 범죄 위험<span lang="en" class="en">Street-level crime risk</span></h3><p>베이지안 신경망을 활용해 도로 구간별 범죄 발생 빈도를 추정하고, 예측 불확실성이 큰 오차를 시사하는 조건을 분석합니다.<span lang="en" class="en">Use Bayesian neural networks to estimate crime frequency by street segment and examine when predictive uncertainty signals larger errors.</span></p></article>
+<article class="card"><p class="eyebrow">서울 · 이동성<span lang="en" class="en">Seoul · Mobility</span></p><h3>지하철 승하차 인원 추정<span lang="en" class="en">Subway ridership estimation</span></h3><p>지하철역 주변의 공간 환경을 바탕으로 승차 인원과 하차 인원을 추정합니다.<span lang="en" class="en">Estimate the alighting and boarding ridership using spatial environment around the subway station.</span></p></article>
 </div>
 </section>
 
 <section id="papers" class="shell split">
-<div><p class="eyebrow">Papers</p><h2>Publications</h2></div>
+<div><p class="eyebrow">논문<span lang="en" class="en">Papers</span></p><h2>발표 논문<span lang="en" class="en">Publications</span></h2></div>
 <article class="paper" id="paper-bukchon">
-<p class="eyebrow">Journal of Transport Geography · 2025</p>
-<h3>A probabilistic AI-based pedestrian volume estimation model for street-level urban management</h3>
-<p>Chulwoong Park, Wonjun No, and Youngchul Kim · Vol. 129, 104437</p>
-<a href="https://doi.org/10.1016/j.jtrangeo.2025.104437">Read the paper</a>
+<p class="eyebrow"><span lang="en">Journal of Transport Geography</span> · 2025</p>
+<h3>도로 구간 단위의 도시 관리를 위한 확률적 AI 기반 보행량 추정 모형<span lang="en" class="en">A probabilistic AI-based pedestrian volume estimation model for street-level urban management</span></h3>
+<p>129권 · 논문 번호 104437 <span lang="en" class="en">Chulwoong Park, Wonjun No, and Youngchul Kim · Vol. 129, 104437</span></p>
+<a href="https://doi.org/10.1016/j.jtrangeo.2025.104437">논문 읽기<span lang="en" class="en-inline">Read the paper</span></a>
 </article>
 </section>
 
 <section id="notes" class="shell split">
-<div><p class="eyebrow">Blog</p><h2>Research notes</h2></div>
+<div><p class="eyebrow">블로그<span lang="en" class="en">Blog</span></p><h2>연구 노트<span lang="en" class="en">Research notes</span></h2></div>
 <div class="notes">
-<details id="note-distribution"><summary>What does a predictive distribution tell us?</summary><div><p>Imagine two street segments with the same predicted hourly footfall. The range of plausible counts may be wider on one street, for example because it has fewer observations or more variable demand.</p><p>A predictive distribution lets us ask a question tied to an action: how likely is footfall to exceed the threshold at which we need temporary traffic controls? Before using that probability, we can check whether similarly confident forecasts have been reliable on held-out streets and times.</p></div></details>
-<details id="note-intervals"><summary>How do we check a prediction interval?</summary><div><p>For a nominal 90% prediction interval, start by measuring how often held-out observations fall inside it. Then look at interval widths. Coverage near 90% tells you little about usefulness if the intervals are too wide for the decision at hand.</p><p>Citywide averages can conceal systematic problems. Check coverage and width by neighbourhood, time of day, or street type where the sample supports it.</p></div></details>
+<details id="note-distribution">
+<summary>세상은 하나의 답을 따르지 않는다<span lang="en" class="en">The World Follows No Single Answer</span></summary>
+<div>
+<p>거슬러 올라가면 돌턴의 원자 모형부터 시작해서,<span lang="en" class="en">Looking back, from Dalton’s atomic model</span></p>
+<p>아인슈타인에 이르기까지.<span lang="en" class="en">all the way to Einstein.</span></p>
+<p>우리의 세계를 이루는 원자, 그리고 전자가 입자로써 존재한다는 가정은<span lang="en" class="en">The assumption that the atoms and electrons that make up our world exist as particles</span></p>
+<p>인류가 시작된 이래 150년 직전까지 진리로 받아들여져 왔다.<span lang="en" class="en">had been accepted as truth from the dawn of humanity until just under 150 years ago.</span></p>
+<p>러더퍼드와 보어, 하이젠베르크를 거치며<span lang="en" class="en">Through the work of Rutherford, Bohr, and Heisenberg,</span></p>
+<p>우리는 원자와 전자가 '확률'로 존재한다는 이론을 받아들이게 되었고,<span lang="en" class="en">we came to accept a theory in which atoms and electrons exist in terms of ‘probability,’</span></p>
+<p>이는 물질 세계가 결정론적으로 그 자리에 있을 것이라는 믿음을 산산히 부쉈다.<span lang="en" class="en">shattering the belief that the material world would sit in its appointed place, as determinism would have it.</span></p>
+<p>세상은 하나의 답을 따르지 않는다.<span lang="en" class="en">The world follows no single answer.</span></p>
+<p>대부분의 가능성이 몰려있는 하나의 답 주변에 어쩌면 그럴 수도 있는 수많은 답들이 멀리 퍼져있고,<span lang="en" class="en">Around the one answer where most of the probability lies, countless other answers fan out into the distance.</span></p>
+<p>아무리 동떨어져있대도 그 확률은 0이 아니다.<span lang="en" class="en">However far away they lie, their probability is never zero.</span></p>
+<p>세상에 이해할 수 없는 현상과 사람은 없다.<span lang="en" class="en">There is no phenomenon or person in the world beyond understanding.</span></p>
+<p>무슨 일이 일어나도, 어떠한 누구를 만나도 그 확률은 0이 아니다.<span lang="en" class="en">Whatever happens, whoever we meet, the probability is never zero.</span></p>
+<p>도시는 수많은 원자와 현상과 사람들이 뒤엉켜 만들어낸 복잡계이다.<span lang="en" class="en">A city is a complex system formed by the entanglement of countless atoms, phenomena, and people.</span></p>
+<p>무슨 일이 일어나도, 어떠한 누구를 만나도 그 확률은 0이 아니다.<span lang="en" class="en">Whatever happens, whoever we meet, the probability is never zero.</span></p>
+<p>대부분의 가능성이 몰려있는 하나의 답만을 받아들이는 도시는 그럴 수도 있는 수많은 답들을 애써 무시할 뿐,<span lang="en" class="en">A city that accepts only the most probable answer goes out of its way to ignore countless other answers that could be true.</span></p>
+<p>아무리 동떨어져있대도 그 소리는 0이 아니다.<span lang="en" class="en">However distant those voices may be, they are never silent.</span></p>
+<p>지금 수많은 연구와 서비스가 사용하는 도시 인공지능은<span lang="en" class="en">The urban AI used in countless studies and services today</span></p>
+<p>대부분의 가능성이 몰려있는 답을 정답으로 제시한다.<span lang="en" class="en">presents the most probable answer as the correct one.</span></p>
+<p>그것이 수익성을 높이는 길이므로.<span lang="en" class="en">Because that is the path to higher profits.</span></p>
+<p>그렇다면 인공지능 도시는 두 가지 갈림길에 서게 될 날이 올 것이다.<span lang="en" class="en">Then the day will come when the AI-powered city reaches a crossroads.</span></p>
+<p>대부분의 가능성을 정답으로 제시하는 인공지능의 보편적 편안함을 받아들일 것인가<span lang="en" class="en">Will we accept the familiar comfort of an AI that presents the most probable answer as the correct one?</span></p>
+<p>그럴 수도 있는 수많은 답을 포용하는 새로운 인공지능을 개발할 것인가.<span lang="en" class="en">Or will we develop a new kind of AI that embraces the countless other answers that could be true?</span></p>
+</div>
+</details>
+<details id="note-intervals"><summary>예측 구간은 어떻게 검증하나요?<span lang="en" class="en">How do we check a prediction interval?</span></summary><div><p>먼저 검증용 관측값 중 90% 예측 구간 안에 들어가는 비율을 구합니다. 다음으로 구간의 폭을 살펴봅니다. 포함 비율이 90%에 가까워도 구간이 너무 넓으면 실제 의사결정에 활용하기 어렵습니다.<span lang="en" class="en">For a nominal 90% prediction interval, start by measuring how often held-out observations fall inside it. Then look at interval widths. Coverage near 90% tells you little about usefulness if the intervals are too wide for the decision at hand.</span></p><p>도시 전체의 평균을 보면 반복적으로 나타나는 문제가 가려질 수 있습니다. 표본이 충분한 경우 동네, 시간대, 도로 유형별로 포함 비율과 구간 폭을 확인합니다.<span lang="en" class="en">Citywide averages can conceal systematic problems. Check coverage and width by neighbourhood, time of day, or street type where the sample supports it.</span></p></div></details>
 </div>
 </section>
 
 <section id="contact" class="shell split">
-<div><p class="eyebrow">Contact</p><h2>Get in touch</h2></div>
-<div class="bodycopy"><p>IPI welcomes conversations about probabilistic AI, urban data, and research collaboration.</p>
+<div><p class="eyebrow">연락처<span lang="en" class="en">Contact</span></p><h2>문의하기<span lang="en" class="en">Get in touch</span></h2></div>
+<div class="bodycopy"><p>PUAI는 확률적 AI, 도시 데이터, 공동 연구에 관한 문의를 환영합니다.<span lang="en" class="en">PUAI welcomes conversations about probabilistic AI, urban data, and research collaboration.</span></p>
 <!-- Set your preferred public address in the data-email attribute before deployment. -->
-<p id="contact-channel" data-email="cwoongpark@hanyang.ac.kr">A public contact address will be added here.</p></div>
+<p id="contact-channel" data-email="cwoongpark@hanyang.ac.kr">공개 연락처를 이곳에 안내할 예정입니다.<span lang="en" class="en">A public contact address will be added here.</span></p></div>
 </section>
 </main>
-<footer class="shell foot"><span>Research Institute for Probabilistic Urban Artificial Intelligence</span><a href="#main">Back to top</a></footer>
+<footer class="shell foot"><span>확률적 도시 인공지능 연구소<span lang="en" class="en">Research Institute for Probabilistic Urban Artificial Intelligence</span></span><a href="#main">맨 위로<span lang="en" class="en-inline">Back to top</span></a></footer>
 </body>
 </html>

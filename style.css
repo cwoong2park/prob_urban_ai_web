@@ -36,3 +36,18 @@ h2 .en,h3 .en{font-size:.76em;line-height:1.25}
 .bodycopy .en,.card p:not(.eyebrow) .en,.notes p .en{margin-top:.4em}
 .hero h1,.split h2,.section h2,.card h3,.paper h3{word-break:keep-all;overflow-wrap:anywhere}
 nav .en{margin-top:0;font-size:.86em}
+
+.blog-page{max-width:48rem;padding-block:clamp(2.5rem,6vw,5rem)}
+.blog-page h1{font-size:clamp(2rem,5vw,3.75rem);word-break:keep-all;overflow-wrap:anywhere}
+.post-list{list-style:none;margin:0 0 1.25rem;padding:0}
+.blog-page .post-list{margin-top:1.5rem}
+.post-list li{padding-block:1rem;border-bottom:1px solid var(--line)}
+.post-list h2,.post-list h3,.post-body h2{font-size:clamp(1.2rem,3vw,1.6rem);line-height:1.25}
+.post-list p,.post-body h2+p{margin-top:.65rem}
+.post{margin-top:1.5rem}
+.post-body,.post-toc{margin-top:2rem}
+.post-body p+h2{margin-top:2rem}
+.post-toc{display:block;padding:1rem 1.25rem;border:1px solid var(--line);border-radius:8px}
+.post-toc ol{margin:0;padding-inline-start:1.3rem}
+.post-toc li+li{margin-top:.5rem}
+.top [aria-current]{color:var(--accent)}

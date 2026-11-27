@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>예측 구간은 어떻게 검증하나요? How do we check a prediction interval? | PUAI</title>
+<meta name="theme-color" content="#0b1015">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기<span lang="en" class="en-inline">Skip to content</span></a>
+<header class="shell top">
+<a class="brand" href="../../index.html" lang="en"><img class="mark" src="../../normal-distribution-logo.png" width="40" height="40" alt="">Research Institute for Probabilistic Urban AI</a>
+<nav aria-label="주 메뉴 / Main navigation"><a href="../../index.html#about">소개<span lang="en" class="en">About</span></a><a href="../../index.html#research">연구<span lang="en" class="en">Research</span></a><a href="../../index.html#papers">논문<span lang="en" class="en">Papers</span></a><a href="../index.html" aria-current="true">블로그<span lang="en" class="en">Blog</span></a><a href="../../index.html#contact">연락처<span lang="en" class="en">Contact</span></a></nav>
+</header>
+<main id="main" class="shell blog-page">
+<a href="../index.html">블로그 전체 보기<span lang="en" class="en-inline">All posts</span></a>
+<article class="post">
+<h1>예측 구간은 어떻게 검증하나요?<span lang="en" class="en">How do we check a prediction interval?</span></h1>
+<div class="bodycopy post-body">
+<p>먼저 검증용 관측값 중 90% 예측 구간 안에 들어가는 비율을 구합니다. 다음으로 구간의 폭을 살펴봅니다. 포함 비율이 90%에 가까워도 구간이 너무 넓으면 실제 의사결정에 활용하기 어렵습니다.<span lang="en" class="en">For a nominal 90% prediction interval, start by measuring how often held-out observations fall inside it. Then look at interval widths. Coverage near 90% tells you little about usefulness if the intervals are too wide for the decision at hand.</span></p><p>도시 전체의 평균을 보면 반복적으로 나타나는 문제가 가려질 수 있습니다. 표본이 충분한 경우 동네, 시간대, 도로 유형별로 포함 비율과 구간 폭을 확인합니다.<span lang="en" class="en">Citywide averages can conceal systematic problems. Check coverage and width by neighbourhood, time of day, or street type where the sample supports it.</span></p>
+</div>
+</article>
+</main>
+<footer class="shell foot"><span>확률적 도시 인공지능 연구소<span lang="en" class="en">Research Institute for Probabilistic Urban Artificial Intelligence</span></span><a href="#main">맨 위로<span lang="en" class="en-inline">Back to top</span></a></footer>
+</body>
+</html>
